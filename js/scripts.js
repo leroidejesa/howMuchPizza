@@ -5,28 +5,27 @@
 
 
 
-var Pizza = function(size, toppings) {
-  this.size = size
+var Pizza = function(quantity, size, toppings) {
+  this.quantity = quantity
+  this.pizzaSize = size
   this.toppings = toppings
 };
 
 Pizza.prototype.cost = function() {
   var totalCost = 0
   var sizePrices = { "small": 5, "medium": 8, "large": 10 };
-  totalCost += sizePrices[this.size]
   this.toppings.forEach(function(topping) {
     totalCost += 1
   })
+  totalCost += sizePrices[this.pizzaSize]
+  totalCost *= this.quantity
   return totalCost;
 }
 
 
+var Order = function(pizzas, quantity) {
+  this.pizza = pizzas
+  this.quantity = quantity
+}
 
-
-//
-// var Order = function(pizzas, quantity) {
-//   this.pizza = pizzas
-//   this.quantity = quantity
-// }
-//
-// var order1 = new Order(pizza1, 2);
+var order1 = new Order(pizza1, 2);
