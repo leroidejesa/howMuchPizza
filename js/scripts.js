@@ -9,7 +9,7 @@
 var Pizza = function(quantity, size, toppings) {
   this.quantity = quantity;
   this.pizzaSize = size;
-  this.toppings = [];
+  this.toppings = [toppings];
 };
 
 Pizza.prototype.cost = function() {
