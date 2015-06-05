@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <!-- bootstrap styles -->
    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
@@ -13,9 +14,61 @@
    <script src='js/scripts.js'></script>
     <title>Pizza</title>
   </head>
-    <h1>Pizza Parlor</h1>
+
   <body>
-    <div class="container">
-    </div>
-  </body>
+      <div class="container">
+        <h1>Pizza Delivery</h1>
+
+        <div class="row">
+          <div class="col-md-4">
+            <h2></h2>
+            <form id="new-order">
+              <div class="form-group">
+                <label for="new-first-name">Order name</label>
+                <input type="text" class="form-control" id="new-order-name">
+              </div>
+
+              <div id="new-pizzas">
+                <div class="new-pizza">
+                  <div class="form-group">
+                    <label for="new-size">Size</label>
+                    <input type="text" class="form-control new-size">
+                  </div>
+                  <div class="form-group">
+                    <label for="new-toppings">Toppings</label>
+                    <input type="text" class="form-control new-toppings">
+                  </div>
+                  <div class="form-group">
+                    <label for="new-quantity">Quantity</label>
+                    <input type="text" class="form-control new-quantity">
+                  </div>
+                </div>
+              </div>
+
+              <span class="btn btn-primary" id="add-pizza">Add another pizza</span>
+              <br>
+              <br>
+              <button type="submit" class="btn">Add to Order</button>
+            </form>
+
+            <h2>Pizza Cart:</h2>
+            <ul id="pizzas">
+
+            </ul>
+          </div>
+
+          <div class="col-md-8">
+            <div id="show-order">
+              <h2></h2>
+
+              <p>Order name: <span class="order-name"></span></p>
+              <p>Pizzas:</p>
+              <ul id="pizzas">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
 </html>

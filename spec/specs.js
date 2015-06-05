@@ -26,17 +26,3 @@ describe('Order', function() {
     expect(testOrder.totalCost()).to.equal(35);
   })
 })
-
-
-
-
-
-
-
-// describe('Account', function() {
-//   it("", function() {
-//
-//     expect().to.equal();
-//   });
-
-// });

@@ -4,7 +4,7 @@
 // Create a method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
 
 
-
+// raw JS
 var Pizza = function(quantity, size, toppings) {
   this.quantity = quantity
   this.pizzaSize = size
@@ -39,9 +39,33 @@ Order.prototype.totalCost = function() {
 
 
 
-// 
-// $(document).ready(function() {
-//
-// })
-//
-// })
+// jQuery
+$(document).ready(function() {
+
+  $("#add-pizza").click(function() {
+    $("#new-pizzas").append('<div class="new-pizza">' +
+                                 '<div class="form-group">' +
+                                   '<label for="new-size">Size</label>' +
+                                   '<input type="text" class="form-control new-size">' +
+                                 '</div>' +
+                                 '<div class="form-group">' +
+                                   '<label for="new-toppings">Toppings</label>' +
+                                   '<input type="text" class="form-control new-toppings">' +
+                                 '</div>' +
+                                 '<div class="form-group">' +
+                                   '<label for="new-quantity">Quantity</label>' +
+                                   '<input type="text" class="form-control new-quantity">' +
+                                 '</div>' +
+                               '</div>');
+  });
+
+  $("form#new-order").submit(function(event) {
+    event.preventDefault();
+
+    var inputtedOrderName = $("input#new-order-name").val();
+    var newOrder = new Order(inputtedOrderName, []);
+
+    $(".new-pizza").each(function)
+  })
+
+});
