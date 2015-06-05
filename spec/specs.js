@@ -13,9 +13,20 @@ describe('Pizza', function() {
   });
 
   it("returns the cost of a single pizza, taking into account size and toppings", function() {
-    var testPizza = new Pizza(2, "large", "mushrooms");
-    expect(testPizza.cost()).to.equal(22);
+    var testPizza = new Pizza(2, "large", "mushrooms, sausage");
+    expect(testPizza.cost()).to.equal(24);
   });
+
+  it("returns a titleized string of inputted pizza size", function() {
+    var testPizza = new Pizza(2, "large", "mushrooms, sausage");
+    expect(testPizza.capitalPizzaSize()).to.equal("Large");
+  });
+
+  it("returns a titleized string of inputted toppings", function() {
+    var testPizza = new Pizza(2, "large", "mushrooms, sausage");
+    expect(testPizza.capitalToppings()).to.equal("Mushrooms, Sausage");
+  });
+
 });
 
 describe('Order', function() {

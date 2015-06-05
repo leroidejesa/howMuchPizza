@@ -9,7 +9,7 @@
 var Pizza = function(quantity, size, toppings) {
   this.quantity = quantity;
   this.pizzaSize = size;
-  this.toppings = [toppings];
+  this.toppings = toppings.split(" ");
 };
 
 Pizza.prototype.cost = function() {
@@ -22,6 +22,25 @@ Pizza.prototype.cost = function() {
   pizzaCost *= this.quantity
   return pizzaCost;
 }
+
+Pizza.prototype.capitalToppings = function() {
+  var words = this.toppings
+  var array = []
+  for (var i=0; i<words.length; ++i) {
+    array.push(words[i].charAt(0).toUpperCase() + words[i].toLowerCase().slice(1))
+  }
+  return array.join(' ')
+}
+
+Pizza.prototype.capitalPizzaSize = function() {
+  var words = this.pizzaSize.split(' ')
+  var array = []
+  for (var i=0; i<words.length; ++i) {
+    array.push(words[i].charAt(0).toUpperCase() + words[i].toLowerCase().slice(1))
+  }
+  return array.join(' ')
+}
+
 
 
 var Order = function(orderName) {
@@ -85,7 +104,7 @@ $(document).ready(function() {
       $("ul#pizzas").text("");
       var pizzaCounter = 0
       newOrder.pizzas.forEach(function(pizza) {
-        $("ul#pizzas").append("<li>Size: " + pizza.pizzaSize + ", Toppings: " + pizza.toppings + ", Quantity: " + pizza.quantity + "</li>");
+        $("ul#pizzas").append("<li>Size: " + pizza.pizzaSize + ", Toppings: " + pizza.toppings + " Quantity: " + pizza.quantity + "</li>");
         pizzaCounter += parseInt(pizza.quantity);
       });
 
