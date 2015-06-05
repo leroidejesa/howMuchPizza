@@ -18,7 +18,14 @@ describe('Pizza', function() {
   });
 });
 
-
+describe('Order', function() {
+  it("should account for the order name and the total cost of pizzas ordered", function() {
+    var testPizza = new Pizza(2, "large", ["sausage", "pineapple"]);
+    var testPizza2 = new Pizza(1, "medium", ["pepperoni", "mushrooms", "onions"]);
+    var testOrder = new Order("George", [testPizza, testPizza2]);
+    expect(testOrder.totalCost()).to.equal(35);
+  })
+})
 
 
 

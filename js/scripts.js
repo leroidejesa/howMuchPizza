@@ -12,20 +12,36 @@ var Pizza = function(quantity, size, toppings) {
 };
 
 Pizza.prototype.cost = function() {
-  var totalCost = 0
+  var pizzaCost = 0
   var sizePrices = { "small": 5, "medium": 8, "large": 10 };
   this.toppings.forEach(function(topping) {
-    totalCost += 1
-  })
-  totalCost += sizePrices[this.pizzaSize]
-  totalCost *= this.quantity
-  return totalCost;
+    pizzaCost += 1
+  });
+  pizzaCost += sizePrices[this.pizzaSize]
+  pizzaCost *= this.quantity
+  return pizzaCost;
 }
 
 
-var Order = function(pizzas, quantity) {
-  this.pizza = pizzas
-  this.quantity = quantity
+var Order = function(name, pizzas) {
+  this.orderName = name
+  this.pizzas = pizzas
 }
 
-var order1 = new Order(pizza1, 2);
+Order.prototype.totalCost = function() {
+  var orderCost = 0
+  this.pizzas.forEach(function(pizza) {
+    orderCost += pizza.cost();
+  });
+  return orderCost;
+}
+
+
+
+
+
+$(document).ready(function() {
+
+})
+
+})
