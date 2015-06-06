@@ -1,10 +1,6 @@
-// Create a website for a pizza company where a user can order a pizza and see the final cost.
-//
-// Allow the user to choose quantity, toppings and size.
-// Create a method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
-
-
 // raw JS
+
+// in order to capitalize inputted names, pizza sizes, and toppings
 String.prototype.titleize = function() {
   var words = this.split(' ')
   var array = []
@@ -13,7 +9,6 @@ String.prototype.titleize = function() {
   }
   return array.join(' ')
 }
-
 
 var Pizza = function(quantity, size, toppings) {
   this.quantity = quantity;
@@ -47,6 +42,13 @@ Order.prototype.totalCost = function() {
   return orderCost;
 };
 
+function resetFields(){
+  $("input#new-order").val("");
+  $("input.new-size").val("");
+  $("input.new-toppings").val("");
+  $("input.new-quantity").val("");
+  $("div.new-pizza").not(':first').remove();
+}
 
 
 // jQuery
@@ -81,10 +83,6 @@ $(document).ready(function() {
       var inputtedQuantity = $(this).find("input.new-quantity").val();
 
       var newPizza = new Pizza(inputtedQuantity, inputtedSize, inputtedToppings);
-      // var updatedPizzaSize = newPizza.capitalPizzaSize();
-      // var updatedToppings = newPizza.capitalToppings();
-      // // var updatedToppings = cleanPunctuation(capitalToppings);
-      // var updatedPizza = new Pizza(inputtedQuantity, updatedPizzaSize, updatedToppings);
 
       newOrder.pizzas.push(newPizza);
     });
@@ -94,7 +92,7 @@ $(document).ready(function() {
     $(".order").last().click(function() {
       $("#show-order").show();
 
-      $("#show-order h2").text(newOrder.orderName);
+      $("#show-order h4").text("Details:");
 
       $("ul#pizzas").text("");
       var pizzaCounter = 0;
@@ -106,5 +104,7 @@ $(document).ready(function() {
       $("ul#pizzas").append("<li>Total Pizzas: " + pizzaCounter + "</li>");
       $("ul#pizzas").append("<li>Total Cost: " + newOrder.totalCost() + "</li>");
     });
+
+    resetFields();
   });
 });
