@@ -89,7 +89,7 @@ $(document).ready(function() {
 
     $(".order-column").fadeIn();
 
-    $("ul#orders").append("<li><span class='order'>" + newOrder.orderName + "</span></li>");
+    $("ul#orders").append("<li><span class='order'>View Cart</span></li>");
 
     $(".order").last().click(function() {
       $("#show-order").fadeIn();
