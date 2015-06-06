@@ -1,5 +1,14 @@
 #show-order {
   display: none;
+  margin: 10px;
+  padding: 12px;
+  /*padding-left: 50px;*/
+  background:rgba(192, 192, 192, 0.2);
+  border-radius: 20px;
+}
+
+#pizzas {
+  color: white;
 }
 
 .order {
@@ -11,19 +20,44 @@
   text-decoration: underline;
 }
 
-.order-column {
-  padding-left: 30px;
-}
-
 div.img {
   margin: 5px;
   padding: 5px;
+  border: 10px;
   height: auto;
   width: auto;
   float: center;
   text-align: center;
 }
 
-#new-order {
-  padding-left: 50px;
+.order-column {
+  display:none;
+  /*padding-left: 30px;
+  border-radius: 4px;*/
 }
+
+h4 {
+  color: white;
+}
+
+
+#new-order {
+  color: white;
+  margin: 10px;
+  padding: 12px;
+  /*padding-left: 50px;*/
+  background:rgba(192, 192, 192, 0.2);
+  border-radius: 20px;
+}
+
+body {
+  background: url("http://i.imgur.com/YvBJ2QR.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+}
+
+///////

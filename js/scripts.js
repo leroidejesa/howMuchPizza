@@ -87,6 +87,8 @@ $(document).ready(function() {
       newOrder.pizzas.push(newPizza);
     });
 
+    $(".order-column").fadeIn();
+
     $("ul#orders").append("<li><span class='order'>" + newOrder.orderName + "</span></li>");
 
     $(".order").last().click(function() {
