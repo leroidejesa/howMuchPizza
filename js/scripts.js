@@ -35,7 +35,7 @@ Pizza.prototype.cost = function() {
 };
 
 var Order = function(orderName) {
-  this.orderName = orderName;
+  this.orderName = orderName.titleize();
   this.pizzas = [];
 };
 
