@@ -90,7 +90,7 @@ $(document).ready(function() {
     $("ul#orders").append("<li><span class='order'>" + newOrder.orderName + "</span></li>");
 
     $(".order").last().click(function() {
-      $("#show-order").show();
+      $("#show-order").fadeIn();
 
       $("#show-order h4").text("Details:");
 
@@ -102,7 +102,7 @@ $(document).ready(function() {
       });
 
       $("ul#pizzas").append("<li>Total Pizzas: " + pizzaCounter + "</li>");
-      $("ul#pizzas").append("<li>Total Cost: " + newOrder.totalCost() + "</li>");
+      $("ul#pizzas").append("<li>Total Cost: $" + newOrder.totalCost() + "</li>");
     });
 
     resetFields();

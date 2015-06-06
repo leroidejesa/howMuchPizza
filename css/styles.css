@@ -12,5 +12,18 @@
 }
 
 .order-column {
-  padding-left: 100px;
+  padding-left: 30px;
+}
+
+div.img {
+  margin: 5px;
+  padding: 5px;
+  height: auto;
+  width: auto;
+  float: center;
+  text-align: center;
+}
+
+#new-order {
+  padding-left: 50px;
 }
