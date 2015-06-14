@@ -2,10 +2,10 @@
 <br>
 by Leroi Dejesa
 
-Originally completed as a one-day `JavaScript`/`jQuery` assignment at [Epicodus](http://epicodus.com), Portland, Oregon. I like to add a commit or two from time to time though, (very slowly) chipping away old stuff and playing around with new code. Maybe someday it'll turn into a full-blown app.
+Originally completed as a `JavaScript`/`jQuery` exercise at [Epicodus](http://epicodus.com), Portland, Oregon. Nowadays I put in a commit or two from time to time, (very slowly) chipping away old stuff and playing around with new code. I'd like to someday turn it into a full-blown app with elements related to pizza, beer, and anything else you might find on a real brewpub's website.
 <br><br>
 #####DESCRIPTION<br>
-It's a website where users can calculate the final order cost of pizza(s) based on quantity, size, and toppings.
+It's a miniscule website where users can calculate the final order cost of pizza(s) based on quantity, size, and toppings. 
 
 Preview on [BitBalloon™](http://pizzaandbeer.bitballoon.com/) or follow instructions below:
 ````
@@ -15,14 +15,14 @@ Preview on [BitBalloon™](http://pizzaandbeer.bitballoon.com/) or follow instru
 ````
 
 #####KNOWN BUGS/THINGS TO FIX SOON<br>
-*Order menu stretches across the screen at certain screen sizes
-*Order summary is in desperate need of a makeover
+* Order menu stretches across the screen at certain screen sizes
+* Order summary is in desperate need of a makeover
 
 #####FUTURE GOALS/IMPROVEMENTS<br>
-*Dropdown for selecting multiple toppings
-*Nav bar or side bar
-*Something beer-related, maybe the ability to view current tap list
-*More jQuery!
+* Dropdown for selecting multiple toppings
+* Nav bar or side bar
+* Something beer-related, maybe the ability to view current tap list
+* More jQuery!
 
 
 <br>
