@@ -66,10 +66,16 @@ $(document).ready(function() {
                                  '<label for="new-toppings">Toppings</label>' +
                                  '<input type="text" class="form-control new-toppings">' +
                                '</div>' +
-                               '<div class="form-group">' +
-                                 '<label for="new-quantity">Quantity</label>' +
-                                 '<input type="text" class="form-control new-quantity">' +
-                               '</div>' +
+                               '<label for="dropdown-quantity">Quantity</label>' +
+                               '<select class="form-control" id="dropdown-quantity">' +
+                               '<option value="one">1</option>' +
+                                 '<option value="two">2</option>' +
+                                 '<option value="three">3</option>' +
+                                 '<option value="four">4</option>' +
+                                 '<option value="five">5</option>' +
+                                 '<option value="six">6</option>' +
+                                 '<option value="seven">7</option>' +
+                               '</select>' +
                             '</div>');
   });
 
@@ -80,20 +86,17 @@ $(document).ready(function() {
     var newOrder = new Order(inputtedOrderName);
 
     $(".new-pizza").each(function() {
-      // var inputtedSize = $(this).find("input.new-size").val();
       var inputtedSize = $('#dropdown-size option:selected').text();
       var inputtedToppings = $(this).find("input.new-toppings").val();
-      var inputtedQuantity = $(this).find("input.new-quantity").val();
+      var inputtedQuantity = $('#dropdown-quantity option:selected').text();
 
       var newPizza = new Pizza(inputtedQuantity, inputtedSize, inputtedToppings);
 
       newOrder.pizzas.push(newPizza);
     });
 
-    // $("form#new-order").fadeOut();
     $("div").animate({right: '160px'});
-// under construction
-    // $(".order-column").animate({left: '250px'});
+//under construction
 
     $(".order-column").fadeIn();
 
