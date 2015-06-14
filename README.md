@@ -2,7 +2,7 @@
 <br>
 **by Leroi Dejesa**
 
-Originally completed as a `JavaScript`/`jQuery` exercise at [Epicodus](http://epicodus.com), Portland, Oregon. Nowadays I put in a commit or two from time to time, (very slowly) chipping away old stuff and playing around with its code or making it look better. I'd like to someday turn it into a full-blown app with elements related to pizza, beer, and anything else you might find on a real brewpub's website.
+Originally completed as a `JavaScript`/`jQuery` exercise on June 5th 2015 at [Epicodus](http://epicodus.com), Portland, Oregon. Nowadays I put in a commit or two from time to time, (very slowly) chipping away old stuff and playing around with its code or making it look better. I'd like to someday turn it into a full-blown app with elements related to pizza, beer, and anything else you might find on a real brewpub's website.
 <br><br>
 #####DESCRIPTION<br>
 It's a simple app where users can calculate the final order cost of pizza(s) based on quantity, size, and toppings. 
