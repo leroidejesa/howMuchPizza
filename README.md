@@ -10,7 +10,7 @@ It's a website where users can calculate the final order cost of pizza(s) based 
 Preview on [BitBalloon™]() or follow instructions below:
 ````
 1. Clone repository.
-2. Open `pizza.html` in your browser.
+2. Open `index.html` in your browser.
 3. Enjoy!
 ````
 
