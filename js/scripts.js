@@ -87,6 +87,8 @@ $(document).ready(function() {
       newOrder.pizzas.push(newPizza);
     });
 
+    $("form#new-order").fadeOut();
+    
     $(".order-column").fadeIn();
 
     $("ul#orders").append("<li><span class='order'>View Cart</span></li>");
@@ -99,7 +101,7 @@ $(document).ready(function() {
       $("ul#pizzas").text("");
       var pizzaCounter = 0;
       newOrder.pizzas.forEach(function(pizza) {
-        $("ul#pizzas").append("<li>Size: " + pizza.pizzaSize + ", Toppings: (" + pizza.toppings + "), Quantity: " + pizza.quantity + "</li>");
+        $("ul#pizzas").append("<li>Size: " + pizza.pizzaSize + "<br><ol>Toppings:" + "<li>" + pizza.toppings + "</li></ol>" + "<br>Quantity: " + pizza.quantity + "</li>");
         pizzaCounter += parseInt(pizza.quantity);
       });
 
