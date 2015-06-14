@@ -27,21 +27,29 @@
       <div class="row row-centered">
 
         <!-- <div class="col-md-3 col-md-offset-3 vertical-center"> -->
-        <div class="col-md-4 col-centered">
+        <div class="col-md-4">
         </div>
-        <div class="col-md-4 col-centered">
+        <div class="col-md-4">
           <form id="new-order">
             <div class="form-group">
               <label for="new-order-name">Order name</label>
               <input type="text" class="form-control" id="new-order-name">
             </div>
+            <hr>
 
             <div id="new-pizzas">
               <div class="new-pizza">
-                <div class="form-group">
-                  <label for="new-size">Size</label>
-                  <input type="text" class="form-control new-size">
-                </div>
+
+
+                <label for="dropdown-size">Size</label>
+                <select class="form-control" id="dropdown-size">
+                  <option value="one">Small</option>
+                  <option value="two">Medium</option>
+                  <option value="three">Large</option>
+                </select><br>
+
+
+
                 <div class="form-group">
                   <label for="new-toppings">Toppings</label>
                   <input type="text" class="form-control new-toppings">
@@ -58,7 +66,7 @@
           </form>
         </div>
 
-        <div class="col-md-4 col-centered">
+        <div class="col-md-4">
           <div class="order-column">
           <!-- <h3>Your Orders:</h3> -->
           <ul id="orders">

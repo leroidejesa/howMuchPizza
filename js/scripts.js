@@ -55,20 +55,22 @@ function resetFields(){
 $(document).ready(function() {
 
   $("#add-pizza").click(function() {
-    $("#new-pizzas").append('<div class="new-pizza">' +
-                                 '<div class="form-group">' +
-                                   '<label for="new-size">Size</label>' +
-                                   '<input type="text" class="form-control new-size">' +
-                                 '</div>' +
-                                 '<div class="form-group">' +
-                                   '<label for="new-toppings">Toppings</label>' +
-                                   '<input type="text" class="form-control new-toppings">' +
-                                 '</div>' +
-                                 '<div class="form-group">' +
-                                   '<label for="new-quantity">Quantity</label>' +
-                                   '<input type="text" class="form-control new-quantity">' +
-                                 '</div>' +
-                               '</div>');
+    $("#new-pizzas").append('<hr>' + '<div class="new-pizza">' +
+                               '<label for="dropdown-size">Size</label>' +
+                               '<select class="form-control" id="dropdown-size">' +
+                                 '<option value="one">Small</option>' +
+                                 '<option value="two">Medium</option>' +
+                                 '<option value="three">Large</option>' +
+                               '</select><br>' +
+                               '<div class="form-group">' +
+                                 '<label for="new-toppings">Toppings</label>' +
+                                 '<input type="text" class="form-control new-toppings">' +
+                               '</div>' +
+                               '<div class="form-group">' +
+                                 '<label for="new-quantity">Quantity</label>' +
+                                 '<input type="text" class="form-control new-quantity">' +
+                               '</div>' +
+                            '</div>');
   });
 
   $("form#new-order").submit(function(event) {
@@ -78,7 +80,8 @@ $(document).ready(function() {
     var newOrder = new Order(inputtedOrderName);
 
     $(".new-pizza").each(function() {
-      var inputtedSize = $(this).find("input.new-size").val();
+      // var inputtedSize = $(this).find("input.new-size").val();
+      var inputtedSize = $('#dropdown-size option:selected').text();
       var inputtedToppings = $(this).find("input.new-toppings").val();
       var inputtedQuantity = $(this).find("input.new-quantity").val();
 
@@ -87,8 +90,11 @@ $(document).ready(function() {
       newOrder.pizzas.push(newPizza);
     });
 
-    $("form#new-order").fadeOut();
-    
+    // $("form#new-order").fadeOut();
+    $("div").animate({right: '160px'});
+// under construction
+    // $(".order-column").animate({left: '250px'});
+
     $(".order-column").fadeIn();
 
     $("ul#orders").append("<li><span class='order'>View Cart</span></li>");
