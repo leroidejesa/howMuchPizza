@@ -7,15 +7,18 @@ Originally completed as a one-day `JavaScript`/`jQuery` assignment at [Epicodus]
 #####DESCRIPTION<br>
 It's a website where users can calculate the final order cost of pizza(s) based on quantity, size, and toppings.
 
-Preview on [BitBalloon™]() or follow instructions below:
+Preview on [BitBalloon™](http://pizzaandbeer.bitballoon.com/) or follow instructions below:
 ````
 1. Clone repository.
 2. Open `index.html` in your browser.
 3. Enjoy!
 ````
 
-####FUTURE GOALS/IMPROVEMENTS<br>
-*Stylized order summary
+#####KNOWN BUGS/THINGS TO FIX SOON<br>
+*Order menu stretches across the screen at certain screen sizes
+*Order summary is in desperate need of a makeover
+
+#####FUTURE GOALS/IMPROVEMENTS<br>
 *Dropdown for selecting multiple toppings
 *Nav bar or side bar
 *Something beer-related, maybe the ability to view current tap list
